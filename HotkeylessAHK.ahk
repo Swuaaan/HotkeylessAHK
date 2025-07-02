@@ -5,6 +5,8 @@ TraySetIcon("files\icon.ico")
 A_IconTip := "HotkeylessAHK"
 #SingleInstance force
 #Include files\lib.ahk
+#Include AutoHotkeyScripts\lib.ahk
+#Include AutoHotkeyScripts\hkl.ahk
 
 ; HotkeylessAHK by sebinside
 ; ALL INFORMATION: https://github.com/sebinside/HotkeylessAHK
@@ -13,7 +15,7 @@ A_IconTip := "HotkeylessAHK"
 
 serverPort := 42800 ; The port that the server will listen on. Make sure that this port is not blocked by your firewall or used by another application.
 
-functionClassNames := ["CustomFunctions"] ; this can be expanded to allow for other function classes, i.e., PersonalFunctions, WorkFunctions and so on. Note that duplicate function names may hide each other as there is no handling for scopes!
+functionClassNames := ["CustomFunctions","DesktopFunctions"] ; this can be expanded to allow for other function classes, i.e., PersonalFunctions, WorkFunctions and so on. Note that duplicate function names may hide each other as there is no handling for scopes!
 ; These classes can (of course) be defined in other AHK files and imported using #Include "<path to AHK file>".
 
 debug := false ; set to true to see the console output of the Node.js server. This will also show the console window, which is hidden by default.
